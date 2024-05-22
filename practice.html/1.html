@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- <body>
+    <button id="btn">click me with ay mouse button;left, middle, right</button>
+    <p id="message"></p>
+    <script>
+    let btn=document.querySelector('#btn');
+    btn.addEventListener('contextmenu',(e)=>{
+        e.preventDefault();
+    });
+    btn.addEventListener('mouseup',(e)=>{
+        
+        let msg= document.querySelector('#message');
+        switch(e.button){
+            case 0:msg.textContent="left botton clicked.";
+            break;
+            case 1:msg.textContent="middle button clicked.";
+            break;
+            case 2:msg.textContent="right button clicked.";
+            break;
+
+        }
+        
+    })
+
+    </script>
+</body> -->
+<!-- //MODIFIER KEY DEMO... -->
+<body>
+<button id="btnKeys">click me with shift,ctrl,alt pressed</button>
+
+<p id="messageKeys"></p>
+<script>
+    let btnKeys= document.querySelector('#btnKeys');
+    btnKeys.addEventListener('click',(e)=>{
+
+    let keys = [];
+
+    if(e.shiftKey)
+     keys.push('shift');
+
+    if(e.ctrlKey)
+    keys.push('ctrl');
+
+    if(e.altKey)
+    keys.push('alt'); 
+
+let msg=document.querySelector('#messageKeys');
+msg.textContent += `keys: ${keys.join('+')}`;
+    });
+</script>
+</body>
+
+
+
+
+
+
+
+
+</html>
+
+
+
